@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="font-nunito">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    flex: {
+                        "full": "1 1 100%",
+                    },
+                    width: {
+                        "640": "640px",
+                    },
+                    margin: {
+                        "435": "435px"
+                    },
+                    fontFamily: {
+                        'Nunito': 'Nunito',
+
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+
+<body class="flex font-Nunito h-full">
+    <div class="flex-col w-640 ml-40 mr-40 md:ml-20 md:mr-20">
+        <img class="mt-5 " src="./images/main.png" alt="">
+        <div class=" mt-32 font-bold text-6xl">Login</div>
+        <div class="mt-4 font-normal text-sm">Sign in with your data that you entered during your registration.</div>
+        <form class="flex flex-col mt-8" id="login" method="get" action="login.php">
+            <label class="text-xs font-semibold block">Email</label>
+            <input class="flex box-border rounded-lg border-2 w-full pt-3 pr-3 pb-3 pl-3" type="text"
+                placeholder="name@example.com" name="email" required>
+            <label class="text-xs font-semibold mt-7 block">Password</label>
+            <input class="flex box-border rounded-lg border-2 w-full pt-3 pr-3 pb-3 pl-3" type="text"
+                placeholder="min. 8 characters" name="email" required>
+
+            <span class="font-normal"> <input class="mt-7 mr-3" type="checkbox" id="check">Keep me logged in</span>
+            <button
+                class="w-full mt-10 pl-3 pt-4 pr-3 pb-4 bg-[#4E60FF] shadow-[0px_8px_20px_rgba(78,96,255,0.16)] rounded-lg font-bold text-xs text-[#FFFFFF] tracking-[.3px]">Login</button>
+            <a href=""
+                class="font-bold text-xs flex justify-center tracking-[.3px] pl-3 pt-4 pr-3 pb-4 mt-7 text-[#4E60FF]">Forgot
+                password</a>
+            <span class=" flex font-normal mt-20 justify-center text-xs mb-10">Don't have an account? <a href=""
+                    class="text-[#4E60FF] font-bold">Sign up</a></span>
+        </form>
+
+    </div>
+    <div class="flex flex-full  bg-[#697BFF]">
+        <div class="flex flex-col md:mt-10 px-8 relative w-full">
+            <div class=" flex items-center justify-center ">
+                <img src="./images/reviews(2).png" alt="">
+            </div>
+            <div class="flex flex-col  items-center ">
+                <div class=" flex justify-center font-bold  text-3xl not-italic leading-10 text-[#FFFFFF] mt-16">Leave Reviews
+                    for all meals</div>
+                <div class="flex justify-center items-center font-nunito  mt-4 text-[#FFFFFF]">Lorem ipsum dolor sit amet, magna scaevola his ei. Cum te paulo probatus</div>
+                <div class="flex justify-center items-center font-nunito text-[#FFFFFF]"> molestiae, eirmod assentior eum ne, et omnis antiopam mel.</div>
+                <img class="mt-10" src="./images/dots.svg" alt="">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
