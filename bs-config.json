@@ -1,5 +1,5 @@
 {
   "port": 8000,
-  "files": ["src/**/*.{html,png,svg}"],
+  "files": ["src/**/*.{html,png,svg,jpg}"],
   "server": { "baseDir": "src" }
 }
