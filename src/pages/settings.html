@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'Nunito': 'Nunito',
+                    },
+                    flex: {
+                        '00350px': '0 0 350px',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="flex flex-col font-Nunito h-full">
+    <header class="flex items-center justify-center gap-7 items-center py-3 w-full max-w-[1110px] mx-auto">
+        <img class="" src="../images/main.png" alt="">
+        <div class="flex items-center flex-auto">
+            <form class="flex box-border bg-[#EDEEF2] rounded-xl  items-center font-normal px-4 w-[224px] h-[40px]"
+                action="">
+                <input class="bg-[#EDEEF2] font-normal text-sm outline-0 flex-auto" type="text" placeholder="search"
+                    name="q">
+                <button type="submit"><img src="../images/search.png" alt=""> </button>
+            </form>
+        </div>
+
+        <span class="text-sm font-bold ">Restaurants</span>
+        <span class="text-sm font-bold">Deals</span>
+        <span class="text-sm font-bold">My orders</span>
+        <img src="../images/added.png" alt="">
+        <img src="../images/default.png" alt="">
+    </header>
+
+    <hr class="border-solid border-b border-[#EDEEF2]">
+
+    <main class="flex  w-full max-w-[1110px]  mx-auto pt-6 gap-6">
+        <div class="flex flex-col  gap-4 flex-00350px">
+
+            <h1 class="font-semibold text-xl">Settings</h1>
+
+            <div class="flex  items-center box-border gap-3 border-solid border-[1px] rounded-2xl ">
+                <img class="pl-4 pt-4 pb-4" src="../images/icon.png" alt="">
+                <div class="flex-col">
+                    <div class="font-bold text-sm ">Account</div>
+                    <div class="font-normal text-sm text-[#545563]">personal information</div>
+                </div>
+            </div>
+
+            <div class="flex  items-center box-border gap-3 border-solid border-[1px] rounded-2xl ">
+                <img class="pl-4 pt-4 pb-4" src="../images/icon1.png" alt="">
+                <div class="flex-col">
+                    <div class="font-bold text-sm ">Address</Address></div>
+                    <div class="font-normal text-sm text-[#545563]">Shipping address</div>
+                </div>
+            </div>
+
+            <div class="flex  items-center box-border gap-3 border-solid border-[1px] rounded-2xl ">
+                <img class="pl-4 pt-4 pb-4" src="../images/icon2.png" alt="">
+                <div class="flex-col">
+                    <div class="font-bold text-sm ">Payment method </div>
+                    <div class="font-normal text-sm text-[#545563]">Connected credit cards</div>
+                </div>
+            </div>
+
+            <div class="flex  items-center box-border gap-3  border-solid border-[1px] rounded-2xl ">
+                <img class="pl-4 pt-4 pb-4" src="../images/icon3.png" alt="">
+                <div class="flex-col">
+                    <div class="font-bold text-sm ">Security</div>
+                    <div class="font-normal text-sm text-[#545563]">Password, 2FA</div>
+                </div>
+            </div>
+          
+        </div>
+
+        <div class="flex flex-col flex-auto gap-4">
+            <h1 class="font-semibold text-xl ">Account</h1>
+            <div class="flex flex-col box-border border-solid rounded-2xl px-4 border-[1px] ">
+                <h1 class="font-bold text-lg  pt-6">Personal information</h1>
+                <h5 class="font-semibold text-xs mt-4"> Avatar</h5>
+                <div class="flex gap-6 mt-2">
+                    <img src="../images/main avatar.png" alt=""> 
+                    <input type="file" name="change" id="change" placeholder="change" accept="image/png, image/jpeg" >
+                </div>
+                <div class="flex flex-auto gap-4 mt-4 ">
+                    <div class="flex-auto">
+                        <label class="font-semibold text-xs" for="First name">First name </label>
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="text" id="name" required  >
+                    </div>
+                    <div class="flex-auto">
+                        <label class="font-semibold text-xs" for="First name">Last name </label>
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="text" id="name" required  >
+                    </div>
+                </div>
+
+                <div class="flex flex-auto gap-4 mt-8 ">
+                    <div class="flex-auto">
+                        <label class="font-semibold text-xs" for="email">Email </label>
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="email" id="email" required  >
+                    </div>
+                    <div class="flex-auto">
+                        <label class="font-semibold text-xs" for="tentacles">Phone number </label>
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="number" id="tentacles" required min="10" >
+                    </div>
+                </div>
+
+                
+                    <h1 class="font-bold text-lg  mt-16 ">Email notification </h1>
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="new-deals">
+                            <label class="font-normal text-sm ml-3" for="new-deals"> New deals</label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                
+                    </div>
+                
+
+                </fieldset>
+                
+            
+
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
