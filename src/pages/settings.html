@@ -25,14 +25,21 @@
             }
         }
     </script>
-
+    <style>
+        .hoverable:hover {
+            border: 2px solid #4E60FF;
+            background: #F3F4FF;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body class="flex flex-col font-Nunito h-full">
-    <header class="flex items-center justify-center gap-7 items-center py-3 w-full max-w-[1110px] mx-auto">
+    <header class="flex items-center justify-center gap-7 py-3 w-full max-w-[1110px] mx-auto px-4 ">
         <img class="" src="../images/main.png" alt="">
         <div class="flex items-center flex-auto">
-            <form class="flex box-border bg-[#EDEEF2] rounded-xl  items-center font-normal px-4 w-[224px] h-[40px]"
+            <form
+                class="hidden lg:flex box-border bg-[#EDEEF2] rounded-xl  items-center font-normal px-4 w-[224px] h-[40px]"
                 action="">
                 <input class="bg-[#EDEEF2] font-normal text-sm outline-0 flex-auto" type="text" placeholder="search"
                     name="q">
@@ -40,22 +47,22 @@
             </form>
         </div>
 
-        
-        <a class="text-sm font-bold" href="#">Restaurants</a>
-        <a class="text-sm font-bold" href="#">Deals</a>
-        <a class="text-sm font-bold" href="#">My orders</a>
-        <img src="../images/added.png" alt="">
+        <a class="text-sm font-bold hidden sm:block " href="#">Restaurants</a>
+        <a class="text-sm font-bold hidden sm:block " href="#">Deals</a>
+        <a class="text-sm font-bold hidden sm:block " href="#">My orders</a>
+        <img class=" " src="../images/added.png" alt="">
         <img src="../images/default.png" alt="">
+        <img class="sm:hidden " src="../images/default (2).png" alt="">
     </header>
 
     <hr class="border-solid border-b border-[#EDEEF2]">
 
-    <main class="flex  w-full max-w-[1110px]  mx-auto pt-6 gap-6">
+    <main class="flex flex-col sm:flex-row w-full max-w-[1110px]  mx-auto pt-6 gap-6 px-4">
         <div class="flex flex-col  gap-4 flex-00350px">
 
             <h1 class="font-semibold text-xl">Settings</h1>
 
-            <div class="flex  items-center box-border gap-3 border-solid border-[1px] rounded-2xl ">
+            <div class="flex items-center box-border gap-3 border-solid border-[2px] rounded-2xl hoverable">
                 <img class="pl-4 pt-4 pb-4" src="../images/icon.png" alt="">
                 <div class="flex-col">
                     <div class="font-bold text-sm ">Account</div>
@@ -63,15 +70,16 @@
                 </div>
             </div>
 
-            <div class="flex  items-center box-border gap-3 border-solid border-[1px] rounded-2xl ">
+            <div class="flex  items-center box-border gap-3 border-solid border-[2px] rounded-2xl hoverable">
                 <img class="pl-4 pt-4 pb-4" src="../images/icon1.png" alt="">
                 <div class="flex-col">
-                    <div class="font-bold text-sm ">Address</Address></div>
+                    <div class="font-bold text-sm ">Address</Address>
+                    </div>
                     <div class="font-normal text-sm text-[#545563]">Shipping address</div>
                 </div>
             </div>
 
-            <div class="flex  items-center box-border gap-3 border-solid border-[1px] rounded-2xl ">
+            <div class="flex  items-center box-border gap-3 border-solid border-[2px] rounded-2xl hoverable">
                 <img class="pl-4 pt-4 pb-4" src="../images/icon2.png" alt="">
                 <div class="flex-col">
                     <div class="font-bold text-sm ">Payment method </div>
@@ -79,14 +87,14 @@
                 </div>
             </div>
 
-            <div class="flex  items-center box-border gap-3  border-solid border-[1px] rounded-2xl ">
+            <div class="flex  items-center box-border gap-3  border-solid border-[2px] rounded-2xl hoverable">
                 <img class="pl-4 pt-4 pb-4" src="../images/icon3.png" alt="">
                 <div class="flex-col">
                     <div class="font-bold text-sm ">Security</div>
                     <div class="font-normal text-sm text-[#545563]">Password, 2FA</div>
                 </div>
             </div>
-          
+
         </div>
 
         <div class="flex flex-col flex-auto gap-4">
@@ -95,84 +103,92 @@
                 <h1 class="font-bold text-lg  pt-6">Personal information</h1>
                 <h5 class="font-semibold text-xs mt-4"> Avatar</h5>
                 <div class="flex gap-6 mt-2">
-                    <img src="../images/main avatar.png" alt=""> 
-                    <input type="file" name="change" id="change" placeholder="change" accept="image/png, image/jpeg" >
+                    <img src="../images/main avatar.png" alt="">
+                    <input type="file" name="change" id="change" placeholder="change" accept="image/png, image/jpeg">
                 </div>
-                <div class="flex flex-auto gap-4 mt-4 ">
+                <div class="flex flex-col sm:flex-row flex-auto gap-4 mt-4 ">
                     <div class="flex-auto">
                         <label class="font-semibold text-xs" for="First name">First name </label>
-                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="text" id="name" required  >
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3 hoverable" type="text" id="name"
+                            required>
                     </div>
                     <div class="flex-auto">
                         <label class="font-semibold text-xs" for="First name">Last name </label>
-                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="text" id="name" required  >
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3 hoverable" type="text" id="name"
+                            required>
                     </div>
                 </div>
 
-                <div class="flex flex-auto gap-4 mt-8 ">
+                <div class="flex flex-col sm:flex-row flex-auto gap-4 mt-8 ">
                     <div class="flex-auto">
                         <label class="font-semibold text-xs" for="email">Email </label>
-                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="email" id="email" required  >
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3 hoverable" type="email" id="email"
+                            required>
                     </div>
                     <div class="flex-auto">
                         <label class="font-semibold text-xs" for="tentacles">Phone number </label>
-                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3" type="number" id="tentacles" required min="10" >
+                        <input class="flex box-border rounded-lg border-2 w-full px-3 py-3 hoverable" type="number" id="tentacles"
+                            required min="10">
                     </div>
                 </div>
 
-                
-                    <h1 class="font-bold text-lg  mt-16 ">Email notification </h1>
-                    <div class="flex mt-4 gap-4">
-                        <div class="flex flex-col flex-auto gap-6">
-                            <div class="flex items-center">
-                                <input class="w-5 h-5 " type="checkbox" id="new-deals ">
-                                <label class="font-normal text-sm ml-3" for="new-deals"> New deals</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input class="w-5 h-5" type="checkbox" id="new-deals">
-                                <label class="font-normal text-sm ml-3" for="new-deals"> New restaurants</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input class="w-5 h-5" type="checkbox" id="new-deals">
-                                <label class="font-normal text-sm ml-3" for="new-deals"> Older restaurants </label>
-                            </div>
+
+                <h1 class="font-bold text-lg  mt-16 ">Email notification </h1>
+                <div class="flex flex-col sm:flex-row mt-4 gap-4">
+                    <div class="flex flex-col flex-auto gap-6">
+                        <div class="flex items-center">
+                            <input class="w-5 h-5 " type="checkbox" id="New-deals">
+                            <label class="font-normal text-sm ml-3" for="New-deals"> New deals</label>
                         </div>
-    
-                        <div class="flex flex-col flex-auto gap-6">
-                            <div class="flex items-center">
-                                <input class="w-5 h-5 " type="checkbox" id="new-deals ">
-                                <label class="font-normal text-sm ml-3" for="new-deals"> Password change</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input class="w-5 h-5" type="checkbox" id="new-deals">
-                                <label class="font-normal text-sm ml-3" for="new-deals"> Special offer</label>
-                            </div>
-                            <div class="flex items-center">
-                                <input class="w-5 h-5" type="checkbox" id="new-deals">
-                                <label class="font-normal text-sm ml-3" for="new-deals">Newsletter </label>
-                            </div>
+                        <div class="flex items-center">
+                            <input class="w-5 h-5" type="checkbox" id="new-restaurants">
+                            <label class="font-normal text-sm ml-3" for="new-restaurants"> New restaurants</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="w-5 h-5" type="checkbox" id="older restaurants">
+                            <label class="font-normal text-sm ml-3" for="older restaurants"> Older restaurants </label>
                         </div>
                     </div>
 
-                    <hr class="mt-8 -mx-4">
-                    <footer class="flex items-center  ">
-                        <div class=" flex-auto py-5 pl-4">
-                            <button class=" border-solid border-[1px] rounded-xl px-4 py-3"> Log out </button>
+                    <div class="flex flex-col flex-auto gap-6">
+                        <div class="flex items-center">
+                            <input class="w-5 h-5 " type="checkbox" id="Password change">
+                            <label class="font-normal text-sm ml-3" for="Password change"> Password change</label>
                         </div>
+                        <div class="flex items-center">
+                            <input class="w-5 h-5" type="checkbox" id="special offer">
+                            <label class="font-normal text-sm ml-3" for="special offer"> Special offer</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input class="w-5 h-5" type="checkbox" id="Newsletter">
+                            <label class="font-normal text-sm ml-3" for="Newsletter">Newsletter </label>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class=" flex gap-4 py-5 ">
-                            <button class=" border-solid border-[1px] rounded-xl px-4 py-3 ml-4"> Discard changes </button>
-                            <button class=" border-solid border-[1px] rounded-xl px-4 py-3"> Save changes</button>
-                        </div>
-                       
-                    </footer>
-                   
-                    
-                   
+                <hr class="mt-8 -mx-4">
+                <footer class="flex flex-wrap flex-row sm:items-center py-3 gap-4 ">
+                    <div class="flex-[1_1_100%] sm:flex-auto">
+                        <button
+                            class="w-full sm:w-24 h-11 border-solid border-[1px] rounded-xl text-[#FF5C60] border-[#FF5C60] font-bold text-sm">
+                            Log out
+                        </button>
+                    </div>
+                    <button class="w-[calc(50%-8px)] sm:w-36 h-11 border-solid border-[1px] rounded-xl font-bold text-sm"> Discard
+                        changes
+                    </button>
+
+                    <button class="w-[calc(50%-8px)] sm:w-36 h-11 border-solid border-[1px] rounded-xl font-bold text-sm"> Save
+                        changes
+                    </button>
+                </footer>
+
+
+
 
                 </fieldset>
-                
-            
+
+
 
 
             </div>
